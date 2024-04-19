@@ -1,0 +1,16 @@
+{
+    "modules":
+    [
+        {
+            "VolumeBooster":
+            [
+                "VolumeBooster"
+            ],
+
+            "FacebookEnhancements":
+            [
+                "FacebookDownloader"
+            ]
+        }
+    ]
+}

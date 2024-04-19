@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetPolish - Options</title>
+    <link rel="stylesheet" href="/assets/css/options.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <section class="layout">
+
+        <div class="sidebar">
+            <div class="sidebar-container">
+                <div class="sidebar-top" href="https://www.netpolish.com" target="_blank">
+                    <img class="sidebar-logo" src="/assets/images/logo-full.png" alt="NetPolish Website"/>
+                    <h2 class="sidebar-title">NetPolish</h2>
+                </div>
+                <div class="sidebar-separator" style="margin-bottom: 10px;"></div>
+                <section id="Sidebar-Options">
+                    <div id="DefaultOptions" class="sidebar-options">
+                        <ul>
+                            <li>
+                                <a href="#general" class="tablink active">
+                                    <i class="material-icons md-20" role="img" aria-hidden="true">settings</i>
+                                    <span i18n="tabgeneral">General</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#themes" class="tablink">
+                                    <i class="material-icons md-20" role="img" aria-hidden="true">contrast</i>
+                                    <span i18n="tabthemes">Themes</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#backup" class="tablink">
+                                    <i class="material-icons md-20" role="img" aria-hidden="true">cloud_sync</i>
+                                    <span i18n="tabbackup">Backup</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#support" class="tablink">
+                                    <i class="material-icons md-20" role="img" aria-hidden="true">help</i>
+                                    <span i18n="tabsupport">Support</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-separator"></div>
+                    <div id="CustomJSandCSSOptions" class="sidebar-options">
+                        <ul id="CustomJSandCSSOptions-UL">
+                            <li>
+                                <a href="#customjsandcss" class="tablink">
+                                    <i class="material-icons md-20" role="img" aria-hidden="true">open_in_new</i>
+                                    <span i18n="tabcustomjsandcss">Custom JS and CSS</span>
+                                </a>
+                            </li>
+                            <!-- This section is dynamically filled - Enabled Custom JS and CSS -->
+                        </ul>
+                    </div>
+                    <div class="sidebar-separator"></div>
+                    <div id="ModuleOptions" class="sidebar-options">
+                        <ul id="ModuleOptions-UL">
+                            <li>
+                                <a href="#modules" class="tablink">
+                                    <i class="material-icons md-20" role="img" aria-hidden="true">extension</i>
+                                    <span i18n="tabmodules">Module Settings</span>
+                                </a>
+                            </li>
+                            <!-- This section is dynamically filled - Module Settings -->
+                        </ul>
+                    </div>
+                </section>
+                <div class="sidebar-spacer"></div>
+                <div class="sidebar-separator"></div>
+                <div class="sidebar-bottom">
+                    <span><p id="VersionNumber">v0.0.0</p></span>
+                    <span><p>Made By CodingCarson</p></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- =---- Main Settings Content ----= -->
+        <div class="container">
+            <header>
+                <h1 id="MainSettingsContentTitle">Current Option Tab's Title</h1>
+            </header>
+            <section id="MainSettingsContent" class="settings">
+                <!-- This section is dynamically filled - Current Option Tab's Settings Settings -->
+            </section>
+        </div>
+    </section>
+
+    <!-- Scripts For Options UI -->
+    <script src="options.js"></script>
+</body>
+</html>
