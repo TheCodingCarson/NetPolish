@@ -1,0 +1,50 @@
+{
+    "manifest_version": 3,
+    "name": "NetPolish",
+    "version": "1.0.0",
+    "description": "Enhances Your Internet Experience.",
+    "permissions": [
+      "scripting",
+      "activeTab",
+      "tabs",
+      "webNavigation",
+      "storage"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "web_accessible_resources": [
+      {
+          "resources": ["/modules/*/*_Exclude.json"],
+          "matches": ["<all_urls>"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "options_page": "options.html",
+    "devtools_page": "/devtools/devtools.html",
+    "action": {
+      "default_title": "NetPolish - Enhanced Internet",
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "assets/images/icon16.png",
+        "48": "assets/images/icon48.png",
+        "128": "assets/images/icon128.png"
+      }
+    },
+	"sidebar_action": {
+	  "default_title": "NetPolish - Enhanced Internet",
+	  "default_panel": "sidepanel.html",
+	  "default_icon": {
+		"19": "assets/images/icon19.png",
+		"38": "assets/images/icon38.png",
+		"152": "assets/images/icon152.png"
+	  }
+	},
+    "icons": {
+      "16": "assets/images/icon16.png",
+      "48": "assets/images/icon48.png",
+      "128": "assets/images/icon128.png"
+    }
+  }

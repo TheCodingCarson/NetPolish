@@ -1,0 +1,9 @@
+{
+    "settings":
+    [
+        {
+            "Show Volume Booster" : "Toggle",
+            "Max Boost" : "Slider(500-1000)"
+        }
+    ]
+}
