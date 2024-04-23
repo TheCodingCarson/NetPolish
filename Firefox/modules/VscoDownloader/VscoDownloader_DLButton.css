@@ -1,0 +1,81 @@
+/* Facebook Downloader Button */
+.vsco-downloader-downloadbutton {
+  position: fixed;
+  z-index: 9999 !important; //Ensure it's on top
+  bottom: 1vh;
+  left: 0.25vw;
+  backface-visibility: hidden;
+  background-color: #6ED3B2;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none !important;
+  height: 30px;
+  outline: none;
+  overflow: hidden;
+  padding: 7px 15px;
+  text-align: center !important;
+  margin: auto;
+  opacity: .50 !important;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  clear: both !important;
+  pointer-events: auto !important;
+  transition: opacity .25s ease-in-out !important;
+}
+
+.vsco-downloader-downloadbutton:hover {
+  opacity: 1 !important;
+  clear: both !important;
+  text-decoration: none !important;
+  transition: opacity .25s ease-in-out !important;
+}
+
+.vsco-downloader-downloadbutton:not:hover {
+ opacity: .10 !important;
+ clear: both !important;
+ text-decoration: none !important;
+ transition: opacity .25s ease-in-out !important;
+}
+
+/* Facebook Downloader Alerts */
+.alert {
+  position: absolute !important;
+  opacity: 1;
+  z-index: 8888 !important; //Ensure it's on top
+  top: 1vh;
+  left: 50%;
+  height: 35px;
+  margin: auto;
+  clear: both;
+  padding-left: 7px;
+  padding-right: 7px;
+  transform: translateX(-50%) !important;
+  text-align: center !important;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-sizing: border-box;
+  font-size: 15px;
+  line-height: 35px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.alert-success {
+	color: #0f5132;
+	background-color: #d1e7dd;
+	border-color: #badbcc;
+}
+
+.alert-danger {
+	color: #842029;
+	background-color: #f8d7da;
+	border-color: #f5c2c7;
+}

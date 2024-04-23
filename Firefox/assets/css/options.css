@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #212121;
+    margin: 0;
+    padding: 0;
+}
+
+.layout {
+    width: 100vw;
+    height: 100vh;
+  
+    display: grid;
+    grid:
+      "sidebar body" 1fr
+      / 12.5% auto;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    background-color: #171717;
+}
+
+.sidebar-container {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sidebar-container section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sidebar-top {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+.sidebar-title {
+    color: white;
+    font-size: 20px;
+}
+
+.sidebar-logo {
+    width: 48px;
+    height: 48px;
+    margin-right: 7px;
+}
+
+.sidebar-separator {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #c6c6c6;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar-spacer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.sidebar-options {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: -10px;
+}
+
+.sidebar-options li {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar-options ul {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 0px;
+    padding-inline-start: 0px;
+    list-style-type: none;
+    width: 100%;
+    gap: 10px;
+}
+
+.tablink {
+    display: flex;
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 17px;
+    line-height: 100%;
+    text-decoration: none;
+    width: 100%;
+    align-self: center;
+    align-items: center;
+}
+
+.tablink.active {
+    background-color: #2e2e2e;
+}
+
+.tablink:hover {
+    background-color: #2e2e2e;
+}
+
+.tablink span {
+    margin-left: 5px;
+}
+
+.tablink i {
+    margin-left: 10px;
+}
+
+.sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: flex-end;
+    margin-top: auto;
+    margin-bottom: 0px;
+}
+
+.sidebar-bottom p {
+    text-align: center;
+    line-height: 0%;
+}
+
+.container {
+    grid-area: body;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container h1, h2, h3, p {
+    color: white;
+}
+
+.container h1 {
+    font-size: 30px;
+}
+
+/* --- Material Icons --- */
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+/* Custom sizing the icon. */
+.material-icons.md-20 { font-size: 20px; }

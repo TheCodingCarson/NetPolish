@@ -1,0 +1,21 @@
+{
+    "modules":
+    [
+        {
+            "VolumeBooster":
+            {
+                "modules": "VolumeBooster"
+            },
+
+            "FacebookEnhancements":
+            {
+                "modules": "FacebookDownloader",
+                "css": "FacebookDownloader-PhotoPageView.css",
+                "urls":
+                [
+                "https://www.facebook.com/photo*"
+                ]
+            }
+        }
+    ]
+}
