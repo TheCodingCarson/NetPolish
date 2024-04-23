@@ -15,10 +15,12 @@ Modules are made in a way to make maintaining the codebase as easy as possible. 
 ## Module Structure Layout
 Modules can include anything inside the folder for the name of the module as needed without any issues.
 There are a few required files needed in each module folder listed here:
-- ModuleName_Excluded.json
 - ModuleName_Settings.json
 
-Those are the only needed to required files for each module folder. Folders for modules **MUST** be the exact name of what is before the '_Excluded.json' and '_Settings.json' otherwise it will throw errors in the console.error log.
+Optional File:
+- ModuleName_Excluded.json
+
+Those are the only needed to required and optional files for each module folder. Folders for modules **MUST** be the exact name of what is before the '_Excluded.json' and '_Settings.json' otherwise it will throw errors in the console.error log.
 
 ## Module 'ModuleName_Excluded.json' Information & Layout
 A module's '_Excluded.json' must follow this layout:

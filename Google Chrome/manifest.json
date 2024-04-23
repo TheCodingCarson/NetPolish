@@ -7,13 +7,11 @@
       "scripting",
       "activeTab",
       "tabs",
+      "webNavigation",
       "storage"
     ],
     "host_permissions": [
-      "http://*/*",
-      "http://*/*://*/*",
-      "https://*/*",
-      "https://*/*://*/*"
+      "<all_urls>"
     ],
     "web_accessible_resources": [
       {

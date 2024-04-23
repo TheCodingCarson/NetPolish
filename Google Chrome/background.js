@@ -1,7 +1,7 @@
 // - Background Stuff - //
 
+// Create DevPanel
 let devToolsConnections = {};
-
 chrome.runtime.onConnect.addListener((port) => {
     if (port.name === "NetPolish-Devtools-Panel") {
         let tabId = port.sender.tab.id;
