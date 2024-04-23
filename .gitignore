@@ -23,7 +23,6 @@
 Google Chrome/build/*.pem
 
 # Firefox Extension Builds
-*.xpi
 _temp/
 
 # Opera Extension Builds
