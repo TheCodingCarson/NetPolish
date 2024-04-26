@@ -1,10 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <title>NetPolish Panel</title>
+    <link rel="stylesheet" href="/devtools/assets/css/devpanel.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Dev Tools Log Output Fonts -->
+    <link rel="stylesheet" href="/devtools/assets/css/dev-fontstyling.css">
 </head>
 <body>
-    <div id="log"></div>
+    <section class="layout">
+
+        <!-- =---- DevPanel Sidebar Content ----= -->
+        <div class="devpanel-sidebar">
+            <div class="devpanel-sidebar-container">
+                <div class="devpanel-sidebar-top" href="https://www.netpolish.com" target="_blank">
+                    <img class="devpanel-sidebar-logo" src="/devtools/assets/images/icon128.png" alt="NetPolish Website"/>
+                    <h2 class="devpanel-sidebar-title">NetPolish</h2>
+                </div>
+                <div class="devpanel-sidebar-separator" style="margin-bottom: 10px;"></div>
+                <div id="DevPanel-Sidebar-Menu-Choices" class="devpanel-sidebar-options">
+                    <ul>
+                        <li>
+                            <a id="ShowDevToolsGeneralContainer" class="devpanel-tablink">
+                                <i class="material-icons md-20" role="img" aria-hidden="true">settings</i>
+                                <span i18n="devtoolstabgeneral">General</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="ShowDevToolsLogsTabContainer" class="devpanel-tablink">
+                                <i class="material-icons md-20" role="img" aria-hidden="true">contrast</i>
+                                <span i18n="devtoolstablogs">Dev Tools Logs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="ShowDevToolsSettingsTabContainer" class="devpanel-tablink">
+                                <i class="material-icons md-20" role="img" aria-hidden="true">cloud_sync</i>
+                                <span i18n="devtoolstabsettings">Dev Tools Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="OpenSettings" class="devpanel-tablink">
+                                <i class="material-icons md-20" role="img" aria-hidden="true">settings</i>
+                                <span i18n="devtoolsopensettingspage">Open Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- =---- Main Settings Content ----= -->
+        <div class="devtoolscontainer">
+
+                <!-- "General Tab" Content -->
+                <div id="DevToolsGeneralTabContainer" class="devtools-tab-content">
+
+                    <devcontainertitle class="devtools-container-title">General</devcontainertitle>
+                    <devcontainersperator class="devtools-container-separator"></devcontainersperator>
+
+                </div>
+
+                <!-- "Dev Tools Logs Tab" Content -->
+                <div id="DevToolsLogsTabContainer" class="devtools-tab-content">
+
+                    <devcontainertitle class="devtools-container-title">Dev Tools Logs</devcontainertitle>
+                    <devcontainersperator class="devtools-container-separator"></devcontainersperator>
+
+                    <devtoolslogsoutputcontainer id="devLogPanelOutput" class="devtools-log-outputs-container">
+
+                    </devtoolslogsoutputcontainer>
+
+                </div>
+
+                <!-- "Dev Tools Settings Tab" Content -->
+                <div id="DevToolsSettingsTabContainer" class="devtools-tab-content">
+
+                    <devcontainertitle class="devtools-container-title">Dev Tools Settings</devcontainertitle>
+                    <devcontainersperator class="devtools-container-separator"></devcontainersperator>
+
+
+                    <div class="devpanel-logconsole-settings">
+
+                        <label for="fontSelector">Choose Font:</label>
+                        <select id="fontSelector">
+                            <option value="Consolas">Consolas</option>
+                            <option value="Menlo">Menlo</option>
+                            <option value="DejaVu Sans Mono">DejaVu Sans Mono</option>
+                        </select>
+
+                        <label for="timeFormatSelector">Time Format:</label>
+                        <select id="timeFormatSelector">
+                            <option value="24h">24-Hour</option>
+                            <option value="12h">12-Hour</option>
+                        </select>
+                        
+                    </div>
+
+                </div>
+
+        </div>
+    </section>
+
+    <!-- Scripts -->
     <script src="/devtools/assets/js/devpanel.js"></script>
 </body>
 </html>

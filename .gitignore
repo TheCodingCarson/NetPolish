@@ -2,7 +2,7 @@
 
 ### VisualStudioCode ###
 .vscode/*
-!.vscode/settings.json
+.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
@@ -19,11 +19,8 @@
 .history
 .ionide
 
-# Google Chrome Extension Builds
-Google Chrome/build/*.pem
+# Extension Test Builds Certs
+Builds/*.pem
 
 # Firefox Extension Builds
 _temp/
-
-# Opera Extension Builds
-Opera/build/*.pem

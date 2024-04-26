@@ -1,0 +1,247 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #212121;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.layout {
+    width: 100vw;
+    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+  
+    display: grid;
+    grid:
+      "sidebar body" 1fr
+      / 175px auto;
+}
+
+.devpanel-sidebar {
+    grid-area: sidebar;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    background-color: #171717;
+}
+
+.devpanel-sidebar-container {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.devpanel-sidebar-container section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.devpanel-sidebar-top {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+.devpanel-sidebar-title {
+    color: white;
+    line-height: fit-content;
+    font-size: 16px;
+}
+
+.devpanel-sidebar-logo {
+    width: 32px;
+    height: 32px;
+    vertical-align: center;
+    margin-right: 7px;
+}
+
+.devpanel-sidebar-separator {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #c6c6c6;
+    width: 90%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.devpanel-sidebar-options {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.devpanel-sidebar-options li {
+    display: flex;
+    width: 100%;
+}
+
+.devpanel-sidebar-options ul {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 0px;
+    padding-inline-start: 0px;
+    list-style-type: none;
+    width: 100%;
+    gap: 10px;
+}
+
+.devpanel-tablink {
+    display: flex;
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 17px;
+    line-height: 100%;
+    text-decoration: none;
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    cursor: pointer !important;
+}
+
+.devpanel-tablink.active {
+    background-color: #2e2e2e;
+}
+
+.devpanel-tablink:hover {
+    background-color: #2e2e2e;
+}
+
+.devpanel-tablink span {
+    margin-left: 5px;
+}
+
+.devpanel-tablink i {
+    margin-left: 10px;
+}
+
+
+.devtoolscontainer {
+    grid-area: body;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Dev Tools Tab Content --- */
+
+.devtools-tab-content {
+    display: none;
+    color: #ffffff;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+    background-color: #0F0F0F;
+    width: 98%;
+    height: 90%;
+    margin-top: 15px;
+    animation: devToolsContainerFadeEffect 1s;
+}
+
+.devtools-tab-content.show {
+    display: flex !important;
+}
+
+/* Fade in Dev Tools Containers */
+@keyframes devToolsContainerFadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+.devtools-container-title {
+    display: flex;
+    color: #ffffff;
+    font-size: 24px;
+    align-self: center;
+    line-height: 24px;
+    min-height: 24px;
+    margin-top: 10px;
+}
+
+.devtools-container-separator {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #c6c6c6;
+    width: 95%;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+.devtools-log-outputs-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    border-color: #C6C6C6;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: none;
+    width: 98.5%;
+    height: 90%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* --- Dev Log Output Format --- */
+
+.devtools-log-outputs-container div {
+    font-family: 'Source Code Pro', monospace;
+    padding: 4px;
+    border-style: none;
+    height: fit-content;
+}
+
+.log-entry { text-decoration: none; }
+
+.error { color: red; }
+.warning { color: orange; }
+.info { color: #19b493; }
+.log { color: #ffffff; }
+.loglink { color: #17c1f5; float: right; margin-right: 5px;}
+.logtimestamp  { color: #cfcfcf;}
+
+/* ----------------------------- */
+
+/* --- Material Icons --- */
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+/* Custom sizing the icon. */
+.material-icons.md-20 { font-size: 20px; }

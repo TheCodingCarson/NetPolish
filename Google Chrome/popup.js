@@ -10,4 +10,4 @@ document.querySelector('#OpenSettings').addEventListener('click', function() {
     } else {
       window.open(chrome.runtime.getURL('options.html'));
     }
-  });
+});

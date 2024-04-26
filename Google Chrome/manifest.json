@@ -8,14 +8,18 @@
       "activeTab",
       "tabs",
       "webNavigation",
-      "storage"
+      "storage",
+      "alarms"
     ],
     "host_permissions": [
       "<all_urls>"
     ],
     "web_accessible_resources": [
       {
-          "resources": ["/modules/*/*_Exclude.json"],
+          "resources": [
+            "/modules/*/*_Exclude.json",
+            "/modules/module_list.json"
+          ],
           "matches": ["<all_urls>"]
       }
     ],
