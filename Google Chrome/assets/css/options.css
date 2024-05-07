@@ -12,7 +12,7 @@ body {
     display: grid;
     grid:
       "sidebar body" 1fr
-      / 12.5% auto;
+      / 240px auto;
 }
 
 .sidebar {
@@ -131,11 +131,16 @@ body {
     margin-left: 10px;
 }
 
+.li-hidden {
+    display: none !important;
+}
+
 .sidebar-bottom {
     display: flex;
     flex-direction: column;
     align-self: center;
     justify-content: flex-end;
+    color: #ffffff;
     margin-top: auto;
     margin-bottom: 0px;
 }
@@ -145,7 +150,7 @@ body {
     line-height: 0%;
 }
 
-.container {
+.main-container {
     grid-area: body;
     display: flex;
     flex-direction: column;
@@ -154,28 +159,87 @@ body {
     height: 100%;
 }
 
-.container h1, h2, h3, p {
-    color: white;
+/* --- Main Settings Tab Content --- */
+
+.main-tab-content {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+    background-color: #0F0F0F;
+    color: #ffffff;
+    width: 75%;
+    height: 75%;
+    margin-top: 15px;
+    animation: mainSettingsContainerFadeEffect 1s;
 }
 
-.container h1 {
-    font-size: 30px;
+.main-tab-content.show {
+    display: flex !important;
+}
+
+/* Fade in Dev Tools Containers */
+@keyframes mainSettingsContainerFadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.main-container-title {
+    display: flex;
+    color: #ffffff;
+    align-self: center;
+    font-size: 24px;
+    line-height: 24px;
+    min-height: 24px;
+    margin-top: 10px;
+}
+
+.main-container-separator {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #c6c6c6;
+    width: 95%;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+.main-tab-content label {
+    display: flex;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 /* --- Material Icons --- */
-/* Rules for sizing the icon. */
+/* Rules for normal sizing the icon. */
+.material-icons.md-16 { font-size: 16px; }
 .material-icons.md-18 { font-size: 18px; }
+.material-icons.md-20 { font-size: 20px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
 
+/* Rules for outlined sizing the icon. */
+.material-icons-outlined.md-16 { font-size: 16px; }
+.material-icons-outlined.md-18 { font-size: 18px; }
+.material-icons-outlined.md-20 { font-size: 20px; }
+.material-icons-outlined.md-24 { font-size: 24px; }
+.material-icons-outlined.md-36 { font-size: 36px; }
+.material-icons-outlined.md-48 { font-size: 48px; }
+
 /* Rules for using icons as black on a light background. */
 .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
 .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+.material-icons-outlined.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons-outlined.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
 
 /* Rules for using icons as white on a dark background. */
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
-
-/* Custom sizing the icon. */
-.material-icons.md-20 { font-size: 20px; }
+.material-icons-outlined.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons-outlined.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }

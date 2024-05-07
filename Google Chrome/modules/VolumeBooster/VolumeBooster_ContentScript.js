@@ -73,7 +73,5 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 	// Respond To Inject Check
     } else if (request.type === "ping" && request.moduleName === "VolumeBooster") {
         sendResponse({ status: "ok" });
-    } else if (request.type === "domainAllowed" && request.moduleName === "VolumeBooster") {
-
     }
 });

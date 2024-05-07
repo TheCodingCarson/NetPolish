@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NetPolish - Options</title>
     <link rel="stylesheet" href="/assets/css/options.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/options_custom_elements.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
 </head>
 <body>
     <section class="layout">
@@ -24,6 +25,12 @@
                                 <a href="#general" class="tablink active">
                                     <i class="material-icons md-20" role="img" aria-hidden="true">settings</i>
                                     <span i18n="tabgeneral">General</span>
+                                </a>
+                            </li>
+                            <li class="li-hidden">
+                                <a href="#nsfw" class="tablink">
+                                    <i class="material-icons-outlined md-20" role="img" aria-hidden="true">explicit</i>
+                                    <span i18n="tabnsfw">NSFW</span>
                                 </a>
                             </li>
                             <li>
@@ -81,15 +88,33 @@
         </div>
 
         <!-- =---- Main Settings Content ----= -->
-        <div class="container">
-            <header>
-                <h1 id="MainSettingsContentTitle">Current Option Tab's Title</h1>
-            </header>
-            <section id="MainSettingsContent" class="settings">
-                <!-- This section is dynamically filled - Current Option Tab's Settings Settings -->
-            </section>
+        <div class="main-container">
+
+            <!-- "General Tab" Content -->
+            <div id="Main-General-TabContainer" class="main-tab-content show">
+                <settingscontainertitle class="main-container-title">General</settingscontainertitle>
+                <settingscontainersperator class="main-container-separator"/>
+
+                <settingscontainer id="generalMainSettings">
+
+                    <!-- Toggle NSFW Features -->
+                    <label>
+                        <input class="settingstoggle" type="checkbox" id="toggleNSFW">
+                        <span class="settingstoggle-text">NSFW Features</span>
+                    </label>
+
+                    <!-- Toggle Developer Features -->
+                    <label>
+                        <input class="settingstoggle" type="checkbox" id="toggleDeveloper">
+                        <span class="settingstoggle-text">Developer Features</span>
+                    </label>
+
+                </settingscontainer>
+
+            </div>
+
+        <!-- =---- END - Main Settings Content ----= -->
         </div>
-    </section>
 
     <!-- Scripts For Options UI -->
     <script src="options.js"></script>
