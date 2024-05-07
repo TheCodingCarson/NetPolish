@@ -1,0 +1,54 @@
+/* == All Local Font Files And Styling == */
+
+/* --- Consolas Font --- */
+@font-face {
+    font-family: 'Consolas';
+    src: url('/devtools/assets/fonts/Consolas/Consolas.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Consolas';
+    src: url('/devtools/assets/fonts/Consolas/Consolas-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Consolas';
+    src: url('/devtools/assets/fonts/Consolas/Consolas-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* --- DejaVu Sans Mono Font --- */
+@font-face {
+    font-family: 'DejaVu Sans Mono';
+    src: url('/devtools/assets/fonts/DejaVuSansMono/DejaVuSansMono.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* --- Menlo Font --- */
+@font-face {
+    font-family: 'Menlo';
+    src: url('/devtools/assets/fonts/Menlo/Menlo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* --- Source Code Pro Font --- */
+@font-face {
+    font-family: 'Source Code Pro';
+    src: url('/devtools/assets/fonts/SourceCodePro/SourceCodePro-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 200 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    src: url('/devtools/assets/fonts/SourceCodePro/SourceCodePro-Italic-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 200 700;
+    font-style: italic;
+}

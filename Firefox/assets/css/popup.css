@@ -50,6 +50,7 @@ html, body {
     height: 1px;
     overflow: hidden;
     position: relative;
+    margin-bottom: 7px;
 }
 
 /* -Primary Grid- */
@@ -73,6 +74,28 @@ html, body {
     font-weight: bold;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.quickoptions_button {
+    color: #FFFFFF;
+    background-color: #4F4F4F;
+    border: 1px solid #FFFFFF;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    transition: all ease-in-out .25s;
+}
+
+.quickoptions_button:hover {
+    background-color: #212121;
+}
+
+.quickoptions_button:active {
+    background-color: #FFFFFF;
 }
 
 /* -Volume Booster Grid- */

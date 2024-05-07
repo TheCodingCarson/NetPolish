@@ -4,11 +4,13 @@
 import { CheckModuleInject } from '/helpers/Module_InjectedCheck.js';
 import { InjectModule } from '/helpers/Module_Injector.js';
 
+// Declaring
+let currentTabId = null;
+
 // Main Volume Booster Logic
 document.addEventListener('DOMContentLoaded', function() {
   const slider = document.getElementById('VolumeBoost');
   const sliderValueDisplay = document.getElementById('VolumeValue');
-  let currentTabId = null;
 
   // Add event listener for right-click (context menu) on the slider
   slider.addEventListener('contextmenu', function(event) {
@@ -47,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
   async function updateSliderValue(volumeMultiplier, forceUpdate = false) {
     const volume = Math.round(volumeMultiplier * 100);
     sliderValueDisplay.textContent = volume + '%';
-    const tabs = await chrome.tabs.query({active: true, currentWindow: true});
+    const tabs = await browser.tabs.query({active: true, currentWindow: true});
     const currentTabId = tabs[0].id;
 
     await browser.storage.local.set({[`volumeForTab${currentTabId}`]: volume});
@@ -57,18 +59,18 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!injected) {
         await InjectModule("VolumeBooster", currentTabId);
         // After injection, send volume update if necessary
-        browser.tabs.sendMessage(currentTabId, { type: "setVolume", volume: volumeMultiplier });
+        browser.tabs.sendMessage(currentTabId, { type: "setVolume", volume: volumeMultiplier, moduleName: "VolumeBooster" });
     } else {
         // Content script already injected, just update volume
-        browser.tabs.sendMessage(currentTabId, { type: "setVolume", volume: volumeMultiplier });
+        browser.tabs.sendMessage(currentTabId, { type: "setVolume", volume: volumeMultiplier, moduleName: "VolumeBooster" });
     }
   }
 
   slider.addEventListener('input', () => updateSliderValue(slider.value / 100));
 });
 
-// Volume Booster - Domain Excuded //
-browser.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+// Volume Booster - Domain Exuded //
+browser.runtime.onMessage.addListener(function(request) {
     if (request.type === "domainExclusion" && request.moduleName === "VolumeBooster") {
         
         const volumeSlider = document.getElementById('VolumeBoost');

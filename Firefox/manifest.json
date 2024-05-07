@@ -11,7 +11,8 @@
       "storage"
     ],
     "host_permissions": [
-      "<all_urls>"
+      "http://*/*:*",
+	  "https://*/*:*"
     ],
     "web_accessible_resources": [
       {

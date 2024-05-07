@@ -5,7 +5,7 @@
 
 // Set the current version number in sidebar - On options.html load
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the current extension manifest using chrome.runtime.getManifest()
+    // Get the current extension manifest using browser.runtime.getManifest()
     const manifest = browser.runtime.getManifest();
 
     // Extract the version number from the manifest

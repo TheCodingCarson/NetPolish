@@ -1,0 +1,49 @@
+.settingstoggle {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    color: inherit;
+    font-size: inherit;
+    width: 2em;
+    height: 1em;
+    box-sizing: content-box;
+    border: 1px solid;
+    border-radius: 1em;
+    vertical-align: text-bottom;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.settingstoggle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    box-sizing: border-box;
+    width: 0.7em;
+    height: 0.7em;
+    margin: 0 0.15em;
+    border: 1px solid;
+    border-radius: 50%;
+    background: currentcolor;
+}
+
+.settingstoggle:checked::before {
+    left: 1em;
+    background: #00ff55;
+}
+
+.settingstoggle:disabled {
+    opacity: 0.4;
+}
+
+.settingstoggle-text {
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
