@@ -7,13 +7,21 @@
                 "modules": "VolumeBooster"
             },
 
-            "FacebookEnhancements":
+            "ChatGPTEnhancements":
             {
-                "modules": "FacebookDownloader",
-                "css": "FacebookDownloader-PhotoPageView.css",
+                "modules": "ChatGPTEnhancements",
                 "urls":
                 [
-                "https://www.facebook.com/photo*"
+                "https://chat.openai.com/*"
+                ]
+            },
+
+            "Example":
+            {
+                "modules": "Example",
+                "urls":
+                [
+                "https://example.com/*"
                 ]
             }
         }

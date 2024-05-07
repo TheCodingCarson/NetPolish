@@ -23,7 +23,8 @@ function setVolumeBeyondLimits(volumeLevel) {
                 // Send error log to DevTools panel via background script
                 chrome.runtime.sendMessage({
                     type: "log",
-                    message: `Error connecting media element to audio context: ${error.message}`
+                    message: `Error connecting media element to audio context: ${error.message}`,
+                    moduleName : "VolumeBooster"
                 })
             }
         }
@@ -58,7 +59,8 @@ function attachGainToElement(node) {
         } catch (error) {
             chrome.runtime.sendMessage({
                 type: "log",
-                message: `Error connecting new media element to audio context: ${error.message}`
+                message: `Error connecting new media element to audio context: ${error.message}`,
+                moduleName : "VolumeBooster"
             });
         }
     }
@@ -66,10 +68,10 @@ function attachGainToElement(node) {
 
 // Listen for messages to adjust volume
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.type === "setVolume") {
+    if (request.type === "setVolume" && request.moduleName === "VolumeBooster") {
         setVolumeBeyondLimits(request.volume);
 	// Respond To Inject Check
-    } else if (request.type === "ping") {
+    } else if (request.type === "ping" && request.moduleName === "VolumeBooster") {
         sendResponse({ status: "ok" });
     }
 });
